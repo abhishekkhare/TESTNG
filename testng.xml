@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite1">
+	<test name="test1">
+		<classes>
+			<class name="com.edu.abhi.test.TestNGSimpleTest" />
+		</classes>
+	</test>
+	<test name="test2">
+		<classes>
+			<class name="com.edu.abhi.test.TestEmailGenerator" />
+		</classes>
+	</test>
+	<test name="test3">
+		<classes>
+			<class name="com.edu.abhi.test.TestEmployeeDetails" />
+		</classes>
+	</test>
+	<test name="test4">
+		<classes>
+			<class name="com.edu.abhi.test.TestngAnnotation" />
+		</classes>
+	</test>
+	<test name="Sample test">
+		<classes>
+			<class name="com.edu.abhi.test.SampleTest" />
+		</classes>
+	</test>
+	<test name="Ignore Test">
+		<classes>
+			<class name="com.edu.abhi.test.IgnoreTest" />
+		</classes>
+	</test>
+	<test name="Group Test">
+		<groups>
+			<run>
+				<include name="functest" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.edu.abhi.test.GroupTestExample" />
+		</classes>
+	</test>
+	<test name="Group Test All">
+
+		<groups>
+			<define name="all">
+				<exclude name="functest" />
+				<include name="checkintest" />
+			</define>
+			<run>
+				<include name="all" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.edu.abhi.test.GroupTestExample" />
+		</classes>
+	</test>
+	<test name="Expected Exception Test">
+		<classes>
+			<class name="com.edu.abhi.test.ExpectedExceptionTest" />
+		</classes>
+	</test>
+	<test name="Dependency Test Using Annotation">
+		<classes>
+			<class name="com.edu.abhi.test.DependencyTestUsingAnnotation" />
+		</classes>
+	</test>
+	<test name="Dependency Test On Group">
+		<classes>
+			<class name="com.edu.abhi.test.DependencyTestOnGroup" />
+		</classes>
+	</test>
+	<test name="Parameterized Test">
+		<parameter name="myName" value="manisha" />
+		<classes>
+			<class name="com.edu.abhi.test.ParameterizedTest1" />
+		</classes>
+	</test>
+	<test name="TimeOut Test">
+		<classes>
+			<class name="com.edu.abhi.test.TestTimeout" />
+		</classes>
+	</test>
+</suite>	
